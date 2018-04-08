@@ -10,19 +10,19 @@ block content
           p
             form(method="POST")
               .form-group.row
-                label.col-md-2.col-form-label(for="ethnicity") Ethnicity
-                select.form-control.mr-md-2.col-md-3#ethnicity(name="ethnicity" size="6" multiple)
+                label.col-sm-3.col-md-2.col-form-label(for="ethnicity") Ethnicity
+                select.form-control.mr-md-2.col-sm-8.col-md-5#ethnicity(name="ethnicity" size="6" multiple)
                     option White
                     option Black/African American
                     option Hispanic/Latino
                     option Asian
                     option American Indian/Alaskan Native
                     option Native Hawaiian/Pacific Islander
-              small.form-text.text-muted.offset-sm-1.offset-md-1 Select multiple by holding Cmd/Ctrl
+              small.form-text.text-muted.offset-sm-3.offset-md-2.mt-0.mb-3 Select multiple by holding Cmd/Ctrl
               .form-group.row
-                label.col-form-label.col-md-2(for="year") Birth Year
-                input.form-control.mr-md-2.col-md-3#year(type="text" name="year")
+                label.col-form-label.col-md-2.col-sm-3(for="year") Birth Year
+                input.form-control.mr-md-2.col-sm-8.col-md-5#year(type="text" name="year")
               .form-group.row
-                label.col-form-label.col-md-2(for="zip") Zip
-                input.form-control.mr-md-2.col-md-3#zip(type="text" name="zip")
+                label.col-form-label.col-md-2.col-sm-3(for="zip") Zip
+                input.form-control.mr-md-2.col-sm-8.col-md-5#zip(type="text" name="zip")
               button.btn.btn-success.pull-right(type="submit") Submit

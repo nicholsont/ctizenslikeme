@@ -1,0 +1,40 @@
+extends ../base.pug
+
+block content
+    .container
+        - var count = 0
+        each bill, index in data
+          .card
+            .card-header
+              strong
+                a(href="#") #{bill.title}
+
+            .card-body
+              p Sponsor: #{bill.sponsor}
+              p Subjects: #{bill.subjects}
+              p Status:
+                .ul.nav.nav-pills.nav-justified
+                  case #{bill.status}
+                    when Introduced:
+                      .li.nav-item
+                        a.nav-link.active(href="#") Introduced
+                      .li.nav-item
+                        a.nav-link.active(href="#") Passed House
+                    when Passed House:
+                      .li.nav-item
+                        a.nav-link.active(href="#") Passed House
+                    when Passed Senate:
+                      .li.nav-item
+                        a.nav-link.active(href="#") Passed Senate
+                    when To President:
+                      .li.nav-item
+                        a.nav-link.active(href="#") To President
+                    when Became Law:
+                      .li.nav-item
+                        a.nav-link.active(href="#") Became Law
+              p
+                a(data-toggle="collapse" data-target="#demo"+index) Summary:
+              p.collapse(id="demo"+index) #{bill.summary}
+            .card-footer
+              p keywords: #{bill.keywords}
+          p

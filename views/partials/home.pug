@@ -1,4 +1,14 @@
 extends ../base.pug
 
 block content
-    .h1 TEST
+    header
+          nav.navbar.navbar-toggleable-sm.navbar-light.bg-faded
+            a.navbar-brand(href="/")
+              i.fa.fa-balance-scale
+
+            ul.navbar-nav.ml-auto
+              a.nav-link(href="#").btn.btn-outline-primary.mx-2 Login
+              a.nav-link(href="/register").btn.btn-primary Sign up FREE
+
+    .col-md-6.col-sm-6.offset-md-5.offset-sm-5.py-5
+        a.btn.btn-primary.py-5(href="/register") Register!

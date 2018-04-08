@@ -4,19 +4,18 @@ block content
     header
       nav.navbar.navbar-toggleable-sm
         .navbar-brand
-            img.CitizensLikeMe_logo-white(src="img/CitizensLikeMe_logo.png")
-        form.form-inline
-          input.form-control.ml-auto(type="search" placeholder="Search" aria-label="Search")
+            a(href="/")
+              img.CitizensLikeMe_logo-white(src="img/CitizensLikeMe_logo.png")
 
     each bill, index in bills
       .card
-        .card-header.pl-1.bg-transparent
+        .card-header.pl-1
           h4 #{bill.title}
 
-        .card-body.mx-2
+        .card-body.mx-2.pt-2
           .row
             .col-4 Status: #{bill.status}
-            .col-8 Keywords:
+            .col-8 Keywords: &nbsp
               span.Rectangle-5 #{bill.keywords}
           p
             .see-more(data-toggle="collapse" data-target="#demo"+index)
@@ -26,5 +25,13 @@ block content
             p.text-uppercase SPONSOR: #{bill.sponsor}
             p OVERVIEW: #{bill.summary}
         .card-footer
-
+          .row
+              .col-2
+                img(src="./img/thumbs-up.png")
+              .col-2
+                img(src="./img/thumbs-down.png")
+              .col-2.pull-right
+                a.text-muted(href="#") SHARE
+                  span
+                    img(src="./img/corner-up-right.png")
       p

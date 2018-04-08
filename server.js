@@ -119,11 +119,10 @@ app.get('/register', (req, res) => {
 app.post('/register', (req, res) => {
 	let ethnicity = splicer(req.body.ethnicity)
 	let ageGroup = calculateAgeGroup(req.body.year);
-	let address = findAddress(req.body.zip, (state) => { return state })
 	let results = scraper([
 		ethnicity,
 		ageGroup,
-		address,
+		findAddress(req.body.zip, (state) => { return state }),
 		req.body.marital,
 		req.body.children
 	])

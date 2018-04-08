@@ -135,3 +135,215 @@ input {
     height: 24px;
     object-fit: contain;
 }
+.bkgrd_menu {
+    width: 1440px;
+    height: 1024px;
+    background-color: #ffffff;
+}
+.Rectangle-10 {
+    width: 1440px;
+    height: 101px;
+    background-color: #2e3037;
+}
+.CitizensLikeMe_logo-white {
+    width: 198px;
+    height: 42px;
+}
+#Ranking-Copy {
+    width: 24px;
+    height: 77px;
+    font-family: Hind;
+    font-size: 48px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #323533;
+}
+.thumbs-up {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+.layer {
+    width: 24px;
+    height: 19px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #7ed321;
+}
+#-copy {
+    width: 24px;
+    height: 19px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #d0021b;
+}
+.thumbs-down {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+.SHARE {
+    width: 43px;
+    height: 14px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #323533;
+}
+.corner-up-right {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+.Picture-Copy {
+    width: 95px;
+    height: 95px;
+    background-color: #d8d8d8;
+    border: solid 1px #979797;
+}
+.TITLE-OF-BILL-TITLE-Copy {
+    width: 709px;
+    height: 31px;
+    font-family: Montserrat;
+    font-size: 26px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #323533;
+}
+.Triangle {
+    width: 12px;
+    height: 10px;
+    background-color: rgba(138, 198, 208, 0.5);
+    border: solid 1px #8ac6d0;
+}
+.see-more {
+    width: 73px;
+    height: 19px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #8ac6d0;
+    cursor: pointer;
+}
+.see-less {
+    width: 60px;
+    height: 19px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #8ac6d0;
+}
+.Rectangle-5 {
+    width: 83px;
+    height: 19px;
+    border-radius: 11.5px;
+    border: solid 2px #6e7570;
+    padding: 2px;
+}
+.TAG {
+    width: 25px;
+    height: 14px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #6e7570;
+}
+.SPONSOR-JOE-BIDEN {
+    width: 148px;
+    height: 26px;
+    font-family: Hind;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #323533;
+}
+.OVERVIEW-Lorem-ipsu {
+    width: 1189px;
+    height: 52px;
+    font-family: Hind;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #323533;
+}
+.Rectangle-2 {
+    width: 359px;
+    height: 80px;
+    border-radius: 36px;
+    background-color: #f45b69;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+.Citizens-Like-Me-sho {
+    width: 787px;
+    height: 72px;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+.Find-legislation-tha {
+    width: 1010px;
+    height: 76px;
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}

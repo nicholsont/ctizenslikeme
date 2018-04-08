@@ -2,13 +2,16 @@ extends ../base.pug
 
 block content
     header
-          nav.navbar.navbar-toggleable-sm.navbar-light.bg-faded
-            a.navbar-brand(href="/")
-              i.fa.fa-balance-scale
+          nav.navbar.navbar-toggleable-sm.bg-dark
+            .navbar-brand
+                img.CitizensLikeMe_logo-white(src="./img/CitizensLikeMe_logo white.png")
 
-            ul.navbar-nav.ml-auto
-              a.nav-link(href="#").btn.btn-outline-primary.mx-2 Login
-              a.nav-link(href="/register").btn.btn-primary Sign up FREE
 
-    .col-md-6.col-sm-6.offset-md-5.offset-sm-5.py-5
-        a.btn.btn-primary.py-5(href="/register") Register!
+    .row.justify-content-center.py-5.mt-3
+      p.py-5.Find-legislation-tha Find legislation that affects YOU
+
+      p.Citizens-Like-Me-sho Citizens Like Me shows legislative bills that are specific to you and what you care about.
+
+    .col-md-6.col-sm-3.offset-md-4.offset-sm-3.py-5
+        a.btn.Rectangle-2.text-white(href="/register")
+          span.display-4 get started

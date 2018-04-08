@@ -1,27 +1,30 @@
 extends ../base.pug
 
 block content
-    .container
-        - var count = 0
-        each bill, index in data
-          .card
-            .card-header
-              strong
-                a(href="#") #{bill.title}
+    header
+      nav.navbar.navbar-toggleable-sm
+        .navbar-brand
+            img.CitizensLikeMe_logo-white(src="img/CitizensLikeMe_logo.png")
+        form.form-inline
+          input.form-control.ml-auto(type="search" placeholder="Search" aria-label="Search")
 
-            .card-body
-              p Sponsor: #{bill.sponsor}
-              p Subjects: #{bill.subjects}
-              p Status:
-                .ul.nav.nav-pills.nav-justified
-                  .li.nav-item
-                    a.nav-link.active(href="#") #{bill.status}
-              p
-                a.btn.btn-info(data-toggle="collapse" data-target="#demo"+index) Summary
-              p.collapse(id="demo"+index) #{bill.summary}
-            .card-footer
-              p keywords:
-                span
-                  each keyword in keywords
-                    a(href='#') # + #{keywords}
+    each bill, index in bills
+      .card
+        .card-header.pl-1.bg-transparent
+          h4 #{bill.title}
+
+        .card-body.mx-2
+          .row
+            .col-4 Status: #{bill.status}
+            .col-8 Keywords:
+              span.Rectangle-5 #{bill.keywords}
           p
+            .see-more(data-toggle="collapse" data-target="#demo"+index)
+                span see more
+                i.fa.fa-caret-down
+          .collapse(id="demo"+index)
+            p.text-uppercase SPONSOR: #{bill.sponsor}
+            p OVERVIEW: #{bill.summary}
+        .card-footer
+
+      p

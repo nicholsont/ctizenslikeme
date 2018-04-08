@@ -7,11 +7,12 @@ let basename  = path.basename(__filename);
 let env       = process.env.NODE_ENV || 'development';
 let config    = require(__dirname + '/../config/config.js')[env];
 let db        = {};
+let sequelize;
 
 if (config.use_env_variable) {
-  let sequelize = new Sequelize(process.env[config.use_env_variable], config);
+  sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
-  let sequelize = new Sequelize(config.database, config.username, config.password, config);
+  sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
 fs

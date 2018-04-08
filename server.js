@@ -1,8 +1,9 @@
 // Import necessary node-modules
 const express = require('express'),
-	bodyParser = require('body-parser'),
-	rp = require('request-promise'),
-	path = require('path');
+	    bodyParser = require('body-parser'),
+	    rp = require('request-promise'),
+	    path = require('path');
+      models = require('./models/')
 
 const jsonData = {
 	"data": [
@@ -112,23 +113,37 @@ app.get('/register', (req, res) => {
 	});
 });
 
+// TODO: consider abstracting to a register controller
 app.post('/register', (req, res) => {
 	let ethnicity = splicer(req.body.ethnicity)
 	let ageGroup = calculateAgeGroup(req.body.year);
-	findAddress(req.body.zip, (state) => {
-		// console.log(ethnicity);
-		// console.log(ageGroup);
-		// console.log(state);
-		res.render('partials/results.pug', {
-			pageTitle: 'results',
-			data: jsonData.data
-		})
-	});
+	models
+	.User
+  .create(
+  	{
+			first_name: req.body.first_name,
+			last_name: req.body.last_name,
+			age_group: ageGroup,
+			ethnicity: ethnicity,
+			address: findAddress(req.body.zip, (state) => { return state })
+		}
+  )
+  .then((user, err) => {
+    if (user) {
+    	res.redirect(`/users/${user.id}`);
+    } else {
+    	res.redirect('/register');
+    }
+  });
 });
 
-
+// TOOD: this fails on single ethnicities passed in
 function splicer (ethnicity) {
 	return ethnicity.map(item => {
+		// TODO: changing ['Native American/Pacific Islander'] =>
+		//       ['Native American, Pacific Islander'] intended?
+		// Feel like this should splat instead of replace so we get
+		// ['Native American', 'Pacific Islander']
 		return item.replace('/', ', ')
 	})
 }
@@ -160,8 +175,11 @@ function findAddress (zip, cb) {
 		qs: query,
 		json: true
 	}).then(response => {
-		state = response.results[0].address_components[3].long_name;
-		cb(state);
+		if (response.results[0] && response.results[0].address_components[3]) {
+			cb(response.results[0].address_components[3].long_name);
+		} else {
+			cb(null)
+		}
 	});
 }
 

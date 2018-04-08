@@ -1,0 +1,28 @@
+extends ../base.pug
+
+block content
+    .container
+      .card
+        .card-header
+          strong Registration
+
+        .card-block
+          p
+            form(method="POST")
+              .form-group.row
+                label.col-md-2.col-form-label(for="ethnicity") Ethnicity
+                select.form-control.mr-md-2.col-md-3#ethnicity(name="ethnicity" size="6" multiple)
+                    option White
+                    option Black/African American
+                    option Hispanic/Latino
+                    option Asian
+                    option American Indian/Alaskan Native
+                    option Native Hawaiian/Pacific Islander
+              small.form-text.text-muted.offset-sm-1.offset-md-1 Select multiple by holding Cmd/Ctrl
+              .form-group.row
+                label.col-form-label.col-md-2(for="year") Birth Year
+                input.form-control.mr-md-2.col-md-3#year(type="text" name="year")
+              .form-group.row
+                label.col-form-label.col-md-2(for="zip") Zip
+                input.form-control.mr-md-2.col-md-3#zip(type="text" name="zip")
+              button.btn.btn-success.pull-right(type="submit") Submit

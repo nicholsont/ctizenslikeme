@@ -1,28 +1,40 @@
 extends ../base.pug
 
 block content
-    .container
-      .card
-        .card-header
-          strong Registration
+    .Rectangle
+      .Citizens-Like-Me.p-4
+        img(src="img/CitizensLikeMe_logo.png")
 
-        .card-block
-          p
-            form(method="POST")
-              .form-group.row
-                label.col-sm-3.col-md-2.col-form-label(for="ethnicity") Ethnicity
-                select.form-control.mr-md-2.col-sm-8.col-md-5#ethnicity(name="ethnicity" size="6" multiple)
-                    option White
-                    option Black/African American
-                    option Hispanic/Latino
-                    option Asian
-                    option American Indian/Alaskan Native
-                    option Native Hawaiian/Pacific Islander
-              small.form-text.text-muted.offset-sm-3.offset-md-2.mt-0.mb-3 Select multiple by holding Cmd/Ctrl
-              .form-group.row
-                label.col-form-label.col-md-2.col-sm-3(for="year") Birth Year
-                input.form-control.mr-md-2.col-sm-8.col-md-5#year(type="text" name="year")
-              .form-group.row
-                label.col-form-label.col-md-2.col-sm-3(for="zip") Zip
-                input.form-control.mr-md-2.col-sm-8.col-md-5#zip(type="text" name="zip")
-              button.btn.btn-success.pull-right(type="submit") Submit
+      p.py-5
+        form(method="POST")
+          .form-group.row
+            .ethnicity.offset-sm-1.offset-md-3.col-sm-3.col-md-3.col-form-label(for="ethnicity") ethnicity
+            select.Rectangle-9.mr-md-2#ethnicity(name="ethnicity")
+                option Select...
+                option White
+                option Black/African American
+                option Hispanic/Latino
+                option Asian
+                option American Indian/Alaskan Native
+                option Native Hawaiian/Pacific Islander
+          .form-group.row
+            .zip-code.offset-sm-1.offset-md-3.col-form-label.col-md-3.col-sm-3(for="year") birth year
+            input.Rectangle-9.mr-md-2#year(type="text" name="year")
+          .form-group.row
+            .zip-code.offset-sm-1.offset-md-3.col-form-label.col-md-3.col-sm-3(for="zip") zip
+            input.Rectangle-9.mr-md-2#zip(type="text" name="zip")
+          .form-group.row
+            .marital-status.offset-sm-1.offset-md-3.col-sm-3.col-md-3.col-form-label(for="ethnicity") marital status
+            select.Rectangle-9.mr-md-2#ethnicity(name="ethnicity")
+                option Select...
+                option Single
+                option Married
+          .form-group.row
+            .do-you-have-children.offset-sm-1.offset-md-3.col-form-label.col-md-3.col-sm-3(for="zip") do you have children?
+            select.Rectangle-9.mr-md-2#ethnicity(name="ethnicity")
+                option Select...
+                option Yes
+                option No
+          button.Rectangle-11.offset-sm-4.offset-md-9.mt-4(type="submit")
+            span.almost-done Let's go
+              img.arrow-right.ml-5(src="img/arrow-right.svg")

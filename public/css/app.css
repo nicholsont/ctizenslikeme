@@ -1,0 +1,137 @@
+.Rectangle {
+    width: 1440px;
+    height: 1024px;
+    background-color: #8ac6d0;
+}
+.Citizens-Like-Me {
+    width: 205px;
+    height: 52px;
+    font-family: Tahu!;
+    font-size: 36px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+.birth-year {
+    width: 173px;
+    height: 43px;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+select {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    text-align-last: center;
+}
+input {
+    text-align: center;
+}
+.helena-lopes-459331-unsplash {
+    width: 552px;
+    height: 1024px;
+}
+.Rectangle-9 {
+    width: 239px;
+    height: 43px;
+    border-radius: 21.5px;
+    border: solid 3px #ffffff;
+}
+.zip-code {
+    width: 152px;
+    height: 43px;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+
+.Line {
+    width: 240px;
+    height: 3px;
+    border: solid 3px #ffffff;
+}
+.ethnicity {
+    width: 159px;
+    height: 43px;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+.marital-status {
+    width: 247px;
+    height: 43px;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+.do-you-have-children {
+    width: 391px;
+    height: 43px;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+.almost-done {
+    width: 155px;
+    height: 29px;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #8ac6d0;
+}
+.Rectangle-11 {
+    width: 279px;
+    height: 52px;
+    border-radius: 27.5px;
+    background-color: #ffffff;
+    border: solid 1px #ffffff;
+}
+.arrow-right {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+.play {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}

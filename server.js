@@ -1,9 +1,9 @@
 // Import necessary node-modules
 const express = require('express'),
-	    bodyParser = require('body-parser'),
-	    rp = require('request-promise'),
-	    path = require('path');
-      models = require('./models/')
+		bodyParser = require('body-parser'),
+		rp = require('request-promise'),
+		path = require('path')
+		models = require('./models/');
 
 const jsonData = {
 	"data": [
@@ -120,7 +120,7 @@ app.post('/register', (req, res) => {
 	models
 	.User
   .create(
-  	{
+	{
 			first_name: req.body.first_name,
 			last_name: req.body.last_name,
 			age_group: ageGroup,
@@ -129,22 +129,24 @@ app.post('/register', (req, res) => {
 		}
   )
   .then((user, err) => {
-    if (user) {
-    	res.redirect(`/users/${user.id}`);
-    } else {
-    	res.redirect('/register');
-    }
+	if (user) {
+		res.redirect(`/users/${user.id}`);
+	} else {
+		res.redirect('/register');
+	}
   });
 });
 
-// TOOD: this fails on single ethnicities passed in
 function splicer (ethnicity) {
+	if (ethnicity.length <=1) {
+		return ethnicity
+	}
 	return ethnicity.map(item => {
-		// TODO: changing ['Native American/Pacific Islander'] =>
-		//       ['Native American, Pacific Islander'] intended?
-		// Feel like this should splat instead of replace so we get
-		// ['Native American', 'Pacific Islander']
-		return item.replace('/', ', ')
+		double = item.split('/', 2)
+		if (double.length > 1) {
+			return double.join("', '")
+		}
+		return item
 	})
 }
 
@@ -164,7 +166,6 @@ function calculateAgeGroup (year) {
 }
 
 function findAddress (zip, cb) {
-	let state;
 	let query = {
 		key:'AIzaSyA6JUM5SUzEYXHo_aGdxUF49Hm8DUDKtUo',
 		address: zip,
